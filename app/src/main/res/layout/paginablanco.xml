@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PaginaBlanco">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="221dp"
+        android:layout_height="201dp"
+        android:layout_marginStart="57dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="57dp"
+        android:layout_marginBottom="26dp"
+        android:contentDescription="TODO"
+        app:layout_constraintBottom_toTopOf="@+id/Enano"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.8"
+        app:srcCompat="@drawable/inicio__2_" />
+
+    <Button
+        android:id="@+id/Elfo"
+        android:layout_width="111dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="54dp"
+        android:layout_marginEnd="64dp"
+        android:layout_marginBottom="44dp"
+        android:text="Elfo"
+        app:layout_constraintBottom_toTopOf="@+id/Humano"
+        app:layout_constraintEnd_toStartOf="@+id/Enano"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/Enano"
+        android:layout_width="114dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginBottom="44dp"
+        android:text="Enano"
+        app:layout_constraintBottom_toTopOf="@+id/Goblin"
+        app:layout_constraintStart_toEndOf="@+id/Elfo" />
+
+    <Button
+        android:id="@+id/Humano"
+        android:layout_width="117dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="54dp"
+        android:layout_marginBottom="37dp"
+        android:text="Humano"
+        app:layout_constraintBottom_toTopOf="@+id/Aceptar"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/Goblin"
+        android:layout_width="114dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginBottom="40dp"
+        android:text="Goblin"
+        app:layout_constraintBottom_toTopOf="@+id/Aceptar"
+        app:layout_constraintStart_toEndOf="@+id/Humano"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/Aceptar"
+        android:layout_width="188dp"
+        android:layout_height="63dp"
+        android:layout_marginStart="111dp"
+        android:layout_marginBottom="47dp"
+        android:enabled="false"
+        android:text="Aceptar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

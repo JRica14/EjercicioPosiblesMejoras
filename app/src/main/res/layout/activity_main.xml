@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="221dp"
+        android:layout_height="201dp"
+        android:layout_marginStart="57dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="57dp"
+        android:layout_marginBottom="26dp"
+        android:contentDescription="TODO"
+        app:layout_constraintBottom_toTopOf="@+id/Ladron"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.8"
+        app:srcCompat="@drawable/inicio__2_" />
+
+    <Button
+        android:id="@+id/Guerrero"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="54dp"
+        android:layout_marginEnd="64dp"
+        android:layout_marginBottom="45dp"
+        android:text="GUerrero"
+        app:layout_constraintBottom_toTopOf="@+id/Mago"
+        app:layout_constraintEnd_toStartOf="@+id/Ladron"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/Ladron"
+        android:layout_width="114dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginBottom="45dp"
+        android:text="Ladrón"
+        app:layout_constraintBottom_toTopOf="@+id/Berserker"
+        app:layout_constraintStart_toEndOf="@+id/Guerrero" />
+
+    <Button
+        android:id="@+id/Mago"
+        android:layout_width="117dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="54dp"
+        android:layout_marginBottom="37dp"
+        android:text="Mago"
+        app:layout_constraintBottom_toTopOf="@+id/Aceptar"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/Berserker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="59dp"
+        android:layout_marginBottom="37dp"
+        android:text="Berserker"
+        app:layout_constraintBottom_toTopOf="@+id/Aceptar"
+        app:layout_constraintStart_toEndOf="@+id/Mago" />
+
+    <Button
+        android:id="@+id/Aceptar"
+        android:layout_width="188dp"
+        android:layout_height="63dp"
+        android:layout_marginStart="111dp"
+        android:layout_marginBottom="47dp"
+        android:enabled="false"
+        android:text="Aceptar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
