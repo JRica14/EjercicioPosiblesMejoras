@@ -2,11 +2,12 @@ package com.example.ejercicio9pantallaresumen
 
 import kotlin.random.Random
 
-class Personaje {
+class Personaje : java.io.Serializable{
     var nombre: String =""
     var fuerza: Int = Random.nextInt(10, 15)
     var defensa: Int = Random.nextInt(1, 5)
     var pesoMochila: Int = 100
+    var mochilaP= Mochila(pesoMochila)
     var vida: Int = 200
     var monedero = HashMap<Int, Int>()
     init {

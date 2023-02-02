@@ -14,9 +14,11 @@ class PantallaResumen  : AppCompatActivity() {
         binding = PantallaresumenBinding.inflate(layoutInflater)
         setContentView(binding.root)
         var personaje= Personaje()
+
         var foto1= intent.getStringExtra("Clase")
         var foto2= intent.getStringExtra("Raza")
         binding.textView.text="Fuerza: "+personaje.fuerza+"\n Defensa: "+personaje.defensa+"\nTamaño mochila: "+personaje.pesoMochila+"\n Vida: "+personaje.vida+"\n Monedero: "+personaje.monedero
+
         if(foto1=="ladron")
             binding.imageView2.setImageResource(R.drawable.ladron)
         else if (foto1=="mago")
@@ -40,7 +42,9 @@ class PantallaResumen  : AppCompatActivity() {
             startActivity(intent)
         }
         binding.Comenzaraventura.setOnClickListener(){
-            val intent = Intent(this, empezar::class.java)
+            val intent = Intent(this, Empezar::class.java)
+            personaje.nombre=binding.editTextTextPersonName.text.toString()
+            intent.putExtra("objeto",personaje )
             startActivity(intent)
         }
 
