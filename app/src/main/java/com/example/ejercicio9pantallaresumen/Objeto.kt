@@ -27,7 +27,7 @@ class Objeto: AppCompatActivity()  {
             startActivity(intent)
         }
         binding.button.setOnClickListener {
-           val mensaje= personaje1.mochilaP.addArticulo(Articulo(20,5,10))
+           val mensaje= personaje1.mochilaP.addArticulo(Articulo(1,20,5,125))
             //Toast.makeText(this,mensaje,Toast.LENGTH_LONG).show()
             println(mensaje)
             println(personaje1.mochilaP.toString())

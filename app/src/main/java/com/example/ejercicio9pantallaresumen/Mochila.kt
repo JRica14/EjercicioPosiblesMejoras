@@ -17,13 +17,17 @@ class Mochila(private var pesoMochila: Int) : java.io.Serializable{
 
 
     }
+
+    fun quitarArticulos(articulo:Articulo){
+        getContenido().remove(articulo)
+    }
     fun getContenido(): ArrayList<Articulo> {
         return contenido
     }
 
 }
 
-class Articulo (private var vida:Int, private var peso:Int, private var valor:Int) : java.io.Serializable{
+class Articulo (private var id:Int,private var vida:Int, private var peso:Int, private var valor:Int) : java.io.Serializable{
 
     fun getPeso():Int{
         return peso
@@ -32,6 +36,9 @@ class Articulo (private var vida:Int, private var peso:Int, private var valor:In
         return vida
     }
 
+    fun getValor():Int{
+        return valor
+    }
     override fun toString(): String {
         return "[ID:$vida, Peso:$peso, Valor:$valor]"
     }
