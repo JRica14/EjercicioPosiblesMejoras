@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "350090052585",
+    "project_id": "puermalogin",
+    "storage_bucket": "puermalogin.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:350090052585:android:2d30ea34d262822dfd8178",
+        "android_client_info": {
+          "package_name": "com.example.ejercicio9pantallaresumen"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "350090052585-hmvdev3g1rqtq1sm7heoj4qqdedmsiuj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA8P-EtLZJzZj__n5VrFZEoRd9SwjkFqyI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "350090052585-hmvdev3g1rqtq1sm7heoj4qqdedmsiuj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

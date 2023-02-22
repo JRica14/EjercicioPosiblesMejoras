@@ -1,5 +1,8 @@
 package com.example.ejercicio9pantallaresumen
 
+import android.media.MediaPlayer
+
+var mediaplayer: MediaPlayer = MediaPlayer()
 class Mochila(private var pesoMochila: Int) : java.io.Serializable{
     private var contenido=ArrayList<Articulo>()
 
