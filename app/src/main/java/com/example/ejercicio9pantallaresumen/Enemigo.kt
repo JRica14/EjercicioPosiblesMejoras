@@ -34,7 +34,8 @@ class Enemigo: AppCompatActivity()  {
             binding.play.visibility=View.INVISIBLE
         }
         binding.button.setOnClickListener {
-            intent = Intent(this, Blanco::class.java)
+            intent = Intent(this, Lucha::class.java)
+            intent.putExtra("objeto",personaje1 )
             if(!binding.play.isVisible)
                 intent.putExtra("play",1)
             else
@@ -63,5 +64,6 @@ class Enemigo: AppCompatActivity()  {
                 e.printStackTrace()
             }
         }
+
     }
 }
