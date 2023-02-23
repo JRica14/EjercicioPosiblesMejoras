@@ -5,9 +5,9 @@ import kotlin.random.Random
 
 class Personaje : java.io.Serializable{
     var nombre: String =""
-    var fuerza: Int = Random.nextInt(10, 16)
+    var fuerza: Int = Random.nextInt(10, 30)
     var defensa: Int = Random.nextInt(1, 6)
-    var pesoMochila: Int = 100
+    var pesoMochila: Int = 200
     var mochilaP= Mochila(pesoMochila)
     var vida: Int = 200
     var monedero = HashMap<Int, Int>()

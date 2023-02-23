@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.widget.Toast
 import androidx.core.view.isVisible
 import com.example.ejercicio9pantallaresumen.databinding.ActivityLuchaBinding
 import java.io.IOException
@@ -16,6 +17,11 @@ class Lucha : AppCompatActivity() {
         binding= ActivityLuchaBinding.inflate(layoutInflater)
         setContentView(binding.root)
         var personaje1= intent.getSerializableExtra("objeto") as Personaje
+
+        if (intent.getIntExtra("play",15)==1){
+            binding.pausar.visibility=View.VISIBLE
+            binding.play.visibility=View.INVISIBLE
+        }
 
         binding.play.setOnClickListener {
             mediaplayer!!.start()
@@ -47,6 +53,9 @@ class Lucha : AppCompatActivity() {
 
 
         binding.progressBar.max=enemigo.vida
+        binding.progressBar2.max=personaje1.vida
+        binding.progressBar.progress=enemigo.vida
+        binding.progressBar2.progress=personaje1.vida
         binding.luchar.setOnClickListener {
 
             var dado= Random.nextInt(1, 7)
@@ -88,8 +97,10 @@ class Lucha : AppCompatActivity() {
                     intent.putExtra("play", 1)
                 else
                     intent.putExtra("play", 0)
+                Toast.makeText(this,"Has podido huir", Toast.LENGTH_SHORT).show()
                 startActivity(intent)
-            }
+            }else
+                Toast.makeText(this,"No has podido huir", Toast.LENGTH_SHORT).show()
 
             personaje1.vida-=enemigo.ataque
             binding.progressBar2.progress=personaje1.vida
@@ -103,39 +114,22 @@ class Lucha : AppCompatActivity() {
 
             if (enemigo.vida<=0){
                 intent = Intent(this, Empezar::class.java)
+                Toast.makeText(this,"Has ganado", Toast.LENGTH_SHORT).show()
                 intent.putExtra("objeto", personaje1)
                 if (!binding.play.isVisible)
                     intent.putExtra("play", 1)
                 else
                     intent.putExtra("play", 0)
+
                 startActivity(intent)
             }
         }
 
         binding.objeto.setOnClickListener {
-
             if (personaje1.vida+20<100)
                 personaje1.vida+=20
-
-            personaje1.vida-=enemigo.ataque
             binding.progressBar2.progress=personaje1.vida
 
-
-
-            if (personaje1.vida<=0){
-                intent = Intent(this, Blanco::class.java)
-                startActivity(intent)
-            }
-
-            if (enemigo.vida<=0){
-                intent = Intent(this, Empezar::class.java)
-                intent.putExtra("objeto", personaje1)
-                if (!binding.play.isVisible)
-                    intent.putExtra("play", 1)
-                else
-                    intent.putExtra("play", 0)
-                startActivity(intent)
-            }
         }
 
 

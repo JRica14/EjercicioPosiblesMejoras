@@ -60,12 +60,15 @@ class Mercader : AppCompatActivity() {
             binding.imageView7.setImageResource(R.drawable.mochila)
             var mensaje =personaje1.venta(binding.editTextNumber.text.toString().toInt(),Articulo(1,20,5,125))
             Toast.makeText(this,mensaje,Toast.LENGTH_SHORT).show()
+
         }
 
         binding.Comprar.setOnClickListener {
             binding.imageView7.setImageResource(R.drawable.objeto)
-            var mensaje=personaje1.compra(binding.editTextNumber.text.toString().toInt(),Articulo(1,20,5,125))
-            Toast.makeText(this,mensaje, Toast.LENGTH_SHORT).show()
+           repeat(binding.editTextNumber.text.toString().toInt()){
+               personaje1.mochilaP.addArticulo(Articulo(1,20,5,125))
+           }
+            Toast.makeText(this,"Objetos añadidos", Toast.LENGTH_SHORT).show()
         }
         binding.play.setOnClickListener {
             mediaplayer!!.start()
